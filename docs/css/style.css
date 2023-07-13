@@ -1,4 +1,11 @@
 @charset "UTF-8";
+:root {
+  --balck: #000;
+  --lightBlack: #333;
+  --gold: #D1A954;
+  --white: #fff;
+}
+
 /* Open Sans */
 @font-face {
   font-family: "Open Sans";
