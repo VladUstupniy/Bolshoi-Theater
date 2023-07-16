@@ -9,6 +9,9 @@
 	<title>title</title>
 	<!-- Файл со стилями -->
 	<link rel="stylesheet" href="css/style.css">
+	<!-- Подключение стилей библиотек -->
+	<link rel="stylesheet" href="libs/owl.carousel.min.css">
+	<link rel="stylesheet" href="libs/owl.theme.default.min.css">
 </head>
 <!-- Отображаемое тело страницы -->
 <body>
@@ -16,7 +19,13 @@
 	<div class="wrapper">
 		<!-- Контент -->
 		<article class="article">
-
+			<div class="article__social">
+				<a href="#" class="article__icon"><img src="./img/svg/instagram.svg" alt="instagram"></a>
+				<a href="#" class="article__icon"><img src="./img/svg/facebook.svg" alt="facebook"></a>
+				<a href="#" class="article__icon"><img src="./img/svg/vkontakte.svg" alt="vkontakte"></a>
+				<a href="#" class="article__icon"><img src="./img/svg/youtube.svg" alt="youtube"></a>
+			</div>
+			<p class="article__text">контактная информация</p>
 		</article>
 		<header class="header">
 			<div class="container">
@@ -38,8 +47,11 @@
 						</p>
 						<a href="#" class="heaader__button button">афиша</a>
 					</div>
-					<div class="header__slider slider">
-						<div class="slider__item">
+					<div class="header__slider header-slider">
+						<div class="header-slider__item">
+							<img src="./img/png/slider-image.png" alt="Афиша">
+						</div>
+						<div class="header-slider__item">
 							<img src="./img/png/slider-image.png" alt="Афиша">
 						</div>
 					</div>
@@ -51,10 +63,10 @@
 	<!-- -------------------------------------------- Подключенные скрипты ------------------------------------------------------- -->
 
     <!-- JS-библиотека jQuery -->
-    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
+    <script src="libs/jquery-3.6.0.min.js"></script>
     <!-- JS-плагины и библиотеки -->
-    <!-- <script src="#"></script> -->
+    <script src="libs/owl.carousel.min.js"></script>
     <!-- Мои файлы скриптов -->
-    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
