@@ -363,6 +363,13 @@ template {
   display: none;
 }
 
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -370,6 +377,13 @@ template {
 
 a {
   text-decoration: none;
+}
+
+.wrapper {
+  position: relative;
+  background-color: #9b7930;
+  width: 100%;
+  min-height: 100%;
 }
 
 .container {
@@ -593,17 +607,12 @@ a {
 
 .article {
   position: fixed;
+  padding: 85px 60px;
+  left: 0;
+  top: 0;
+  height: 100%;
   background-color: var(--lightBlack);
   opacity: 0.75;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.article__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -614,20 +623,82 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.article__icon:not(:last-child) {
-  margin: 0px 0px 30px 0px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .article__text {
+  margin: 0;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: sideways;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-bottom: 160px;
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  letter-spacing: 10%;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  line-height: 0;
   color: var(--white);
-  opacity: 0.7;
+  opacity: 0.75;
+  position: relative;
+}
+.article__text::before {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(-50%, -120px);
+      -ms-transform: translate(-50%, -120px);
+          transform: translate(-50%, -120px);
+  width: 3px;
+  height: 80px;
+  background-color: var(--white);
+}
+
+.article__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.article__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 26px;
+  height: 26px;
+  color: var(--white);
+  opacity: 0.75;
+}
+.article__icon:not(:last-child) {
+  margin-bottom: 30px;
+}
+.article__icon svg {
+  fill: currentColor;
+}
+.article__icon:hover {
+  color: var(--gold);
+  opacity: 1;
 }
 
 .none {
