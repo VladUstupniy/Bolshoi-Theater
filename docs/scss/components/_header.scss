@@ -1,7 +1,7 @@
 .header {
     width: 100vw;
     height: 100vh;
-    padding: 50px;
+    padding: 50px 50px 50px 150px;
     background: url('../img/png/bg.png') center/cover no-repeat;
 }
 .header__content {
@@ -9,10 +9,15 @@
     height: 100%;
     align-items: center;
     justify-content: center;
+    @media (max-width: 992px) {
+        justify-content: start;
+    }
 }
 
 .header__description {
-    flex: 1 1 50%;
+    @media (min-width: 992px) {
+        flex: 1 1 50%;
+    }
 }
 .header__title {
     font-family: var(--OpenSansCondensed);
@@ -30,5 +35,5 @@
     line-height: 21px;
     color: var(--white);
     margin: 0px 0px 50px 0px;
-    max-width: 540px;
+    max-width: 539px;
 }

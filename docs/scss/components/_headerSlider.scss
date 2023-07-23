@@ -1,5 +1,9 @@
 .header-slider {
+    display: block;
     width: 50%;
+    @media (max-width: 992px) {
+        display: none;
+    }
 }
 .header-slider .owl-stage-outer{
     overflow: hidden;
@@ -66,6 +70,8 @@
     bottom: 0;
     border: 0;
     background-color: transparent;
+    cursor: pointer;
+    opacity: 0.75;
 
     font-family: $OpenSansCondensed;
     font-weight: 700;
@@ -75,6 +81,10 @@
     color: var(--white);
     background-repeat: no-repeat;
     background-size: contain;
+    transition: all .3s ease-out;
+    &:hover {
+        opacity: 1;
+    }
 }
 .header-slider .owl-nav .owl-prev {
     padding: 0px 0px 0px 65px;
